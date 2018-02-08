@@ -2,7 +2,7 @@
   "name": "assign-app",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "SET NODE_ENV=production & webpack",
@@ -15,9 +15,10 @@
     "ejs": "~2.5.7",
     "express": "~4.15.5",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "redux": "^3.7.2",
+    "serve-favicon": "~2.4.5",
     "uuid": "^3.1.0"
   },
   "devDependencies": {

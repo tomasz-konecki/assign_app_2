@@ -1,12 +1,13 @@
-const webpack = require('webpack'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
-    OptimizeJsPlugin = require('optimize-js-plugin'),
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const OptimizeJsPlugin = require('optimize-js-plugin')
 
-    env = process.env.NODE_ENV || 'development',
+const env = process.env.NODE_ENV || 'development'
 
-    plugins = [new HtmlWebpackPlugin({
-        template: './src/index.ejs',
+const plugins = [new HtmlWebpackPlugin({
+        title: "test",
+        template: './views/index.ejs',
         filename: 'index.html',
         inject: 'body'
         })
@@ -26,7 +27,7 @@ if (env === 'production') {
 module.exports = {
     entry: [
         'react-hot-loader/patch',
-        './app.js'
+        './src/index.js'
     ],
     output: {
         path:__dirname + '/dist',
