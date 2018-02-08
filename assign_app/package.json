@@ -2,8 +2,11 @@
   "name": "assign-app",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "SET NODE_ENV=production & webpack",
+    "start": "webpack-dev-server --inline --hot --config ./webpack.config.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -12,6 +15,22 @@
     "ejs": "~2.5.7",
     "express": "~4.15.5",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "optimize-js-plugin": "0.0.4",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }
